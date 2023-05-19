@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="row w-50 p-3 mx-auto bg-secondary" style="margin-top: 25vh;">
+        <h1 class="text-center">SIGN IN</h1>
+        <input type="number" id="stdId" class="form-control pt-3" placeholder="id">
+        <input type="text" id="stdName" class="form-control pt-3" placeholder="name">
+        <button class="btn btn-dark" onclick="signIn()">Sign In</button>
+
+    </div>
+    
+
+    <script>
+         let stdArray = [
+             {id: 1, name: "felicidad"},
+             {id: 2, name: "praise"},
+             {id: 3, name: "paul"},
+             {id: 4, name: "emmanuel"},
+             {id: 5, name: "mattew"},
+             {id: 6, name: "esther"},
+             {id: 7, name: "michael"},
+             {id: 8, name: "faith"},
+             {id: 9, name: "precious"},
+             {id: 10, name: "mide"},
+         ]
+
+             function signIn () {
+
+                 let findIndex = stdArray.filter((std, i) => stdId.value == std.id && stdName.
+                 value == std.name);
+                 console.log(findIndex);
+                 if (findIndex != -1) {
+                     alert("You are welcome!")
+                     
+                 } else {
+                     alert("not recorgnised!");
+                     
+                 }
+
+             }
+
+
+    </script>
+
+
+
+
+
+    <script src="./bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
+
+</body>
+</html>
